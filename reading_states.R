@@ -60,11 +60,11 @@ CA_500_plus3 = "/Users/jake/Desktop/Unclaimed_data/CA/04_From_500_To_Beyond/From
 
 # Create Sample
 
-CA_500_plus1.sample <- read_csv(CA_500_plus1, n_max =1000)
+CA_500_plus1.sample <- read_csv(CA_500_plus1, n_max =100)
 
-# Combine addresses into one coluumn
-CA_500_plus1.sample <- CA_500_plus1.sample %>% mutate(addresses = paste(OWNER_STREET_1,",", OWNER_CITY,",",OWNER_STATE))
-
-# Write sample into own file
-write.csv(CA_500_plus1.sample, "state_samples/CA.csv", row.names=FALSE)
+# Combine addresses into one coluumn & drop NA addresses
+CA_500_plus1.sample <- CA_500_plus1.sample %>% drop_na(OWNER_STREET_1) %>% mutate(addresses = paste(OWNER_STREET_1,", ",OWNER_CITY,", ",OWNER_STATE, ", United States", sep=""),
+                                                      zip = HOLDER_ZIP) 
+register_google(key = "AIzaSyDC2k57OGAjkWFo-BsoUmTsY62GE6Hr978")
+CA_500_plus1.sample<-mutate_geocode(CA_500_plus1.sample, addresses)
 
