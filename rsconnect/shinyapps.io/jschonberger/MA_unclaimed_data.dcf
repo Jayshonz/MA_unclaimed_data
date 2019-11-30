@@ -1,0 +1,13 @@
+name: MA_unclaimed_data
+title: MA_unclaimed_data
+username:
+account: jschonberger
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 1506448
+bundleId: 2628302
+url: https://jschonberger.shinyapps.io/MA_unclaimed_data/
+when: 1575125783.10069
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: network_sample|zip_hh_oweed
