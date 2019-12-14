@@ -13,3 +13,6 @@
 * California Uncliamed Property: https://sco.ca.gov/upd_download_property_records.html
 * Hexagonal Chloropleth Structure: https://www.r-graph-gallery.com/328-hexbin-map-of-the-usa.html 
  
+#### Video explaination
+
+Here: https://youtu.be/0W8wo1toXjc 
